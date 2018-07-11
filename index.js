@@ -22,7 +22,7 @@ app.use(
 );
 
 app.get('/', function(req, res){
-  res.sendFile("index.html");
+  res.sendFile(__dirname + "/index.html");
 });
 
 app.get("/api/messages", loginRequired, async function(req, res, next) {
