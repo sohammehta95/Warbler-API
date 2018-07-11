@@ -21,8 +21,8 @@ app.use(
   messagesRoutes
 );
 
-app.get("/",function(req,res){
-  res.send("index.html");
+app.get('/', function(req, res){
+  res.sendFile("index.html");
 });
 
 app.get("/api/messages", loginRequired, async function(req, res, next) {
