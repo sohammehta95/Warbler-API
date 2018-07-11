@@ -21,6 +21,10 @@ app.use(
   messagesRoutes
 );
 
+app.get("/",function(req,res){
+  res.send("index.html");
+});
+
 app.get("/api/messages", loginRequired, async function(req, res, next) {
   try {
     let messages = await db.Message.find()
